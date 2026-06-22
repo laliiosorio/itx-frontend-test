@@ -6,8 +6,7 @@ export default function App() {
     <>
       <Header />
 
-      <p className="text-red-500">HOLII</p>
-      <main className="mx-auto max-w-7xl px-4 py-6">
+      <main className="mx-auto max-w-7xl px-4 py-6 md:mt-16">
         <Outlet />
       </main>
     </>
