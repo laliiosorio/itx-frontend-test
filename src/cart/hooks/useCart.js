@@ -1,13 +1,12 @@
-import { useMutation } from '@tanstack/react-query'
-import { addToCart } from '@/cart/api/cartApi'
+import { useContext } from 'react'
+import { CartContext } from '@/cart/context/cart-context'
 
 export function useCart() {
-  const { mutate, isPending } = useMutation({
-    mutationFn: addToCart,
-  })
+  const context = useContext(CartContext)
 
-  return {
-    addProductToCart: mutate,
-    isAdding: isPending,
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider')
   }
+
+  return context
 }

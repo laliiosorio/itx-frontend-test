@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { CartProvider } from '@/cart/context/CartProvider'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,8 +15,7 @@ const queryClient = new QueryClient({
 export default function Providers({ children }) {
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
-      {/* <CartProvider>{children}</CartProvider> */}
+      <CartProvider>{children}</CartProvider>
     </QueryClientProvider>
   )
 }

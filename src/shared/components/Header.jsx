@@ -1,6 +1,7 @@
-import { Smartphone, ShoppingCart } from 'lucide-react'
+import { Smartphone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from './BreadCrumbs'
+import CartCounter from '@/cart/components/CartCounter'
 
 export default function Header() {
   return (
@@ -11,23 +12,13 @@ export default function Header() {
             <Smartphone />
             CELUKOS
           </Link>
+
           <section className="flex items-center ">
             <section className="hidden md:flex items-center gap-2 mr-4">
               <Breadcrumbs />
             </section>
 
-            {/* TODO ESTO SERA CARTCOUNTER */}
-            <button className=" text-blue-600 relative p-2 hover:opacity-80 active:scale-95 transition-transform duration-150">
-              <span className="">
-                <ShoppingCart />
-              </span>
-              <span
-                className="absolute top-1 right-1 bg-blue-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold cursor-pointer"
-                id="cart-count"
-              >
-                2
-              </span>
-            </button>
+            <CartCounter />
           </section>
         </div>
       </header>
