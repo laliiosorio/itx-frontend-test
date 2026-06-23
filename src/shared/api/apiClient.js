@@ -1,7 +1,10 @@
 import axios from 'axios'
 
+const API_BASE_URL =
+  import.meta.env.API_BASE_URL || 'https://itx-frontend-test.onrender.com'
+
 const apiClient = axios.create({
-  baseURL: 'https://itx-frontend-test.onrender.com',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },

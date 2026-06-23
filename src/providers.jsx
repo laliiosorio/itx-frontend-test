@@ -1,15 +1,19 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClientProvider } from '@tanstack/react-query'
 import { CartProvider } from '@/cart/context/CartProvider'
+import {
+  createQueryClient,
+  persistQueryCache,
+  restoreQueryCache,
+} from '@/shared/utils/queryCachePersistence'
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 60,
-      gcTime: 1000 * 60 * 60,
-      retry: 1,
-      refetchOnWindowFocus: false,
-    },
-  },
+const queryClient = createQueryClient()
+
+restoreQueryCache({ client: queryClient })
+
+queryClient.getQueryCache().subscribe((event) => {
+  if (event?.query?.state.status === 'success') {
+    persistQueryCache({ client: queryClient })
+  }
 })
 
 export default function Providers({ children }) {
