@@ -37,7 +37,7 @@ export default function ProductActions({ product }) {
           disabled={isAdding || !selectedColor || !selectedStorage}
           className="h-12 w-full rounded-lg bg-blue-600 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {isAdding ? 'Adding...' : 'Add to Cart'}
+          {isAdding ? 'Añadiendo...' : 'Añadir al carrito'}
         </button>
       </div>
     </div>

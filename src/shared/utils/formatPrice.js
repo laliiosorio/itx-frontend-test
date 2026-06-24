@@ -1,5 +1,5 @@
 export function formatPrice(price) {
-  if (!price) return 'Price unavailable'
+  if (!price) return 'Precio no disponible'
 
   return `${price} €`
 }

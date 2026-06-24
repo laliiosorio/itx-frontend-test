@@ -9,14 +9,14 @@ export default function Breadcrumbs() {
   }
 
   return (
-    <nav className="hidden md:flex items-center gap-sm mr-lg">
+    <nav className="flex items-center gap-2 text-sm">
       <Link className="hover:text-blue-600 transition-colors" to="/">
         Móviles
       </Link>
       <ChevronRight className="text-gray-300 text-sm" />
-      <Link className="hover:text-blue-600 transition-colors" to="/">
+      <span className="cursor-default border-b-2 border-blue-600 font-medium text-blue-600">
         Detalles
-      </Link>
+      </span>
     </nav>
   )
 }

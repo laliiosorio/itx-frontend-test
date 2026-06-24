@@ -14,17 +14,17 @@ export default function ProductDetailPage() {
   if (isLoading) return <LoadingSpinner />
 
   if (isError) {
-    return <ErrorMessage message={error?.message || 'Error loading product'} />
+    return <ErrorMessage message={error?.message || 'Error al cargar el producto'} />
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8">
+    <section className="mx-auto max-w-7xl px-4 pt-2 pb-8 md:py-8">
       <Link
         to="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900"
+        className="mb-5 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900 md:mb-8"
       >
         <ArrowLeft size={16} />
-        Back to products
+        Volver a productos
       </Link>
 
       <div className="grid gap-10 lg:grid-cols-2">

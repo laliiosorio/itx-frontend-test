@@ -1,7 +1,9 @@
 export default function StorageSelector({ storages, selectedStorage, onChange }) {
   return (
     <div>
-      <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Storage</p>
+      <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">
+        Almacenamiento
+      </p>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {storages.map((storage) => (

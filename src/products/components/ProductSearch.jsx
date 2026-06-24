@@ -9,7 +9,7 @@ export default function ProductSearch({ value, onChange }) {
         type="search"
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        placeholder="Search by brand or model..."
+        placeholder="Buscar por marca o modelo..."
         className="
           h-11
           w-full
