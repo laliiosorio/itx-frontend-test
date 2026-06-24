@@ -6,8 +6,8 @@ import CartCounter from '@/cart/components/CartCounter'
 export default function Header() {
   return (
     <>
-      <header className="fixed top-0 w-full z-50 backdrop-blur-md border-transparent border-b-2 border-b-gray-100 flex justify-center items-center h-16 px-4 md:px-8">
-        <div className="max-w-7xl w-full flex justify-between items-center h-16 px-4 md:px-8">
+      <header className="fixed top-0 w-full z-50 backdrop-blur-md border-transparent border-b-2 border-b-gray-100 h-16">
+        <div className="mx-auto max-w-7xl w-full flex justify-between items-center h-16 px-4">
           <Link to="/" className="flex items-center gap-2 font-black text-lg">
             <Smartphone />
             CELUKOS
@@ -23,7 +23,7 @@ export default function Header() {
         </div>
       </header>
 
-      <section className="md:hidden items-center gap-2 mr-4 mt-16 p-4">
+      <section className="md:hidden mx-auto max-w-7xl items-center gap-2 mt-16 px-4 py-4">
         <Breadcrumbs />
       </section>
     </>
