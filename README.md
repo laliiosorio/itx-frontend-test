@@ -39,10 +39,16 @@ Si necesitas usar otra API, crea un archivo `.env` a partir de `.env.example` y 
 ## Scripts
 
 ```bash
-npm run dev
+npm start
 ```
 
 Levanta el entorno de desarrollo.
+
+```bash
+npm run dev
+```
+
+Levanta el entorno de desarrollo. Es equivalente a `npm start`.
 
 ```bash
 npm run build
